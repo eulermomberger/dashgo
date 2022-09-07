@@ -3,6 +3,7 @@ import { Box, Button, Divider, Flex, Heading, SimpleGrid, Stack} from '@chakra-u
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Form/Input';
 import { Sidebar } from '../../components/Sidebar';
+import Link from 'next/link';
 
 export default function CreateUser() {
   return (
@@ -31,7 +32,9 @@ export default function CreateUser() {
 
           <Flex mt='8' justify='flex-end'>
             <Stack direction='row' spacing='4'>
-              <Button colorScheme='whiteAlpha'>Cancelar</Button>
+              <Link href='/users' passHref>
+                <Button colorScheme='whiteAlpha'>Cancelar</Button>
+              </Link>
               <Button colorScheme='pink'>Salvar</Button>
             </Stack>
           </Flex>
